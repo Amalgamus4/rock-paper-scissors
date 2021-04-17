@@ -26,7 +26,7 @@ function saveMove() {
   playerSelection = this.textContent;
   computerSelection = computerPlay();
   round.textContent = playRound(computerSelection, playerSelection);
-  if (playerScore + computerScore === 5){
+  if (playerScore === 5 || computerScore === 5){
     playerScore > computerScore ? winner.textContent = 'Player wins!' : winner.textContent = 'Computer wins.';
     buttons.forEach((button) => {
       button.removeEventListener('click', saveMove);
